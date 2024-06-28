@@ -18,8 +18,6 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
-      - name: Convert line endings
-        run: find . -type f -exec dos2unix {} \;
       - name: Check style
         run: npm run lint
       - name: build
