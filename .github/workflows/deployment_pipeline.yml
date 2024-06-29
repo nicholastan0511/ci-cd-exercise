@@ -31,3 +31,10 @@ jobs:
           SECRET: bababoi
           TEST_MONGODB_URI: mongodb+srv://fullstack:test@testnote.3rzy09q.mongodb.net/?retryWrites=true&w=majority
           NODE_ENV: test
+      - name: Render Deploy Action
+        if: ${{ github.event_name == 'push'  && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: srv-cpvlnc2ju9rs73ahd32g
+          api-key: rnd_tcqSVGMpcNS6u33zgwQLRNAnudxP
+      
