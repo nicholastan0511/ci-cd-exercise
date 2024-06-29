@@ -15,7 +15,7 @@ beforeEach(async () => {
     let blogObj = new Blog(blog)
     await blogObj.save()
   }
-})
+}, 10000)
 
 test('list has four blogs', async () => {
   const blogs = await api

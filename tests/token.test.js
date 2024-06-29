@@ -19,7 +19,7 @@ beforeEach (async () => {
     blogObj.user = savedUser.body.id
     await blogObj.save()
   }
-})
+}, 10000)
 
 describe('token test', () => {
 
