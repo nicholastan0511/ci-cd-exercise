@@ -3,7 +3,7 @@ const config = require('./utils/config')
 const logger = require('./utils/logger')
 
 app.get('/health', (req, res)  => {
-  res.send('ok')
+  res.send('okeee')
 })
 
 app.listen(config.PORT, () => {
